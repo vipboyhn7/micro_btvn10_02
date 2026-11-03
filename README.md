@@ -35,4 +35,25 @@ curl -X POST http://localhost:8081/api/medicines \
   -H 'Content-Type: application/json' \
   -d '{"code":"PARA-500","name":"Paracetamol","price":12000,"quantity":100}'
 ```
+
+Thanh toán đơn hàng và gửi `OrderEvent` dạng JSON vào `medicine-stock-events`.
+`medicineId` được dùng làm Kafka message key, vì vậy các đơn hàng cùng thuốc
+luôn được phân phối vào cùng một partition:
+
+```bash
+curl -X POST http://localhost:8082/api/pharmacy/sales \
+  -H 'Content-Type: application/json' \
+  -d '{"orderId":"ORDER-001","medicineId":"PARA-500","quantity":2}'
+```
+
+Event có dạng:
+
+```json
+{
+  "orderId": "ORDER-001",
+  "medicineId": "PARA-500",
+  "quantity": 2,
+  "timestamp": "2026-11-03T16:00:00Z"
+}
+```
 # micro_btvn10_01

@@ -6,7 +6,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class KafkaConfig {
+    public static final String MEDICINE_STOCK_EVENTS = "medicine-stock-events";
     public static final String NOTIFICATIONS = "pharmacy-notifications";
+
+    @Bean
+    NewTopic medicineStockEventsTopic() {
+        return new NewTopic(MEDICINE_STOCK_EVENTS, 3, (short) 1);
+    }
 
     @Bean
     NewTopic notificationsTopic() {

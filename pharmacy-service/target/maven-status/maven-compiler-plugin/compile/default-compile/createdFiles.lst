@@ -1,5 +1,6 @@
+com/example/pharmacy/PharmacyServiceApplication.class
+com/example/pharmacy/api/PharmacyController$StockRequest.class
 com/example/pharmacy/api/PharmacyController$SaleRequest.class
 com/example/pharmacy/config/KafkaConfig.class
 com/example/pharmacy/api/PharmacyController.class
-com/example/pharmacy/PharmacyServiceApplication.class
-com/example/pharmacy/api/PharmacyController$StockRequest.class
+com/example/pharmacy/model/OrderEvent.class
