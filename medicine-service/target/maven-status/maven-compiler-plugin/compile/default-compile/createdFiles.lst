@@ -1,0 +1,6 @@
+com/example/medicine/api/MedicineController$PriceRequest.class
+com/example/medicine/api/MedicineController$Medicine.class
+com/example/medicine/api/MedicineController$MedicineRequest.class
+com/example/medicine/api/MedicineController.class
+com/example/medicine/config/KafkaConfig.class
+com/example/medicine/MedicineServiceApplication.class
